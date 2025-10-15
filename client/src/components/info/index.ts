@@ -1,0 +1,6 @@
+export * from './SizeChart'
+export * from './about'
+export * from './contact'
+export * from './map'
+export * from './shipping_policy'
+export * from './wishlist'

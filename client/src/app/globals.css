@@ -1,0 +1,207 @@
+/* Tailwind CSS directives */
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+  /* banner */
+  --banner-gradient: linear-gradient(
+    to right,
+    #d1aa6a 20%,
+    #dabe91 40%,
+    #ede8df
+  );
+  --banner-button-bg: #444444;
+  --banner-btn-border: #999999;
+
+  /* Header  */
+  --header-bg: #f4f4f4;
+  --header-text: #727272;
+  --header-menu-hover-color: #cea45f;
+  --header2-bg:#ffffff;
+
+  /* navbar*/
+  --navbar-bg: #ffffff;
+  --navbar-text-color: #222222;
+  --navbar-text-hover-color:#cea45f;
+  --bg-browser:#222222;
+
+  /* hero */
+  --hero-bg:#F2F3F7;
+  --browser-sidebar:#232323;
+  --browser-text:#ffffff;
+
+
+   /* card */
+   --card-bg:#F7F7F7;
+  --primary-color: #cea45f;
+  --text-muted: #727272;
+  --border-color: #ededed;
+  --browser-border:#cea45f;
+
+  --rubik-font:Rubik, sans-serif;
+  --lato-font:Lato, sans-serif
+
+  
+}
+
+/* Custom Tailwind Utility Classes */
+
+/* Page-scoped themes */
+
+.theme-home2 {
+  --primary-color:#369599;
+  --navbar-bg: #369599;
+  --navbar-text-color: #ffffff;
+  --navbar-text-hover-color:#232323;
+  --browser-sidebar:#ffffff;
+  --bg-browser:#ffffff;
+   --browser-text:#232323;
+   --browser-border:#ffffff;
+
+}
+
+.theme-home3 {
+  --primary-color:#85b839;
+  --header-bg: #85b839;
+  --header-text: #ffffff;
+  --header-menu-hover-color: #232323;
+  --browser-sidebar:#85b839;
+  --bg-browser:#85b839;
+  --browser-text:#ffffff;
+  --browser-border:#85b839;
+  
+  
+
+}
+
+.theme-home4 {
+  --primary-color:#8AABCA;
+  --navbar-bg: #8AABCA;
+  --navbar-text-color: #ffffff;
+  --navbar-text-hover-color:#232323;
+  --browser-sidebar:#ffffff;
+  --border-color: #ffffff;
+  --header2-bg:#8AABCA;
+  --header-bg: #8AABCA;
+   --header-text: #ffffff;
+
+}
+
+
+
+@layer utilities {
+  /* banner */
+  .bg-banner 
+  {
+    background: var(--banner-gradient);
+  }
+  .btn-banner-bg {
+    background-color:var(--banner-button-bg);
+  }
+  .btn-border-color {
+    border-color:var(--banner-btn-border);
+  }
+
+  /* header */
+  .bg-header {
+    background-color:var(--header-bg);
+  }
+
+   .bg-header2{
+    background-color:var(--header2-bg);
+  } 
+  .header-text {
+    color:var(--header-text);
+  }
+  .menu-hover-color:hover {
+    color:var(--header-menu-hover-color);
+  }
+
+  /* navbar */
+  .bg-navbar
+  {
+     background-color:var(--navbar-bg);
+  }
+  .bg-browser
+  {
+    background-color:var(--bg-browser)
+  }
+  .browser-border
+  {
+    
+    border-color:var(--browser-border)
+  }
+  .text-browser
+  {
+    color:var(--browser-text)
+  }
+  .navbar-text
+  {
+    color:var(--navbar-text-color)
+  }
+  .navba-text-hover:hover
+  {
+    color:var(--navbar-text-hover-color)
+  }
+
+
+  /* hero */
+  .bg-hero
+  {
+    background-color:var(--hero-bg)
+  }
+  .bg-browser
+  {
+    background-color: var(--browser-sidebar);
+  }
+
+  /* common */
+  .bg-primary-hover:hover {
+    background-color:var(--primary-color);
+  }
+
+  .bg-primary 
+  {
+    background-color:var(--primary-color);
+  }
+  .bg-card
+  {
+    background-color: var(--card-bg);
+  }
+  .text-muted
+   {
+    color:var(--text-muted);
+  }
+  .text-hover:hover {
+    color:var(--primary-color);
+  }
+  .text-primary {
+    color: var(--primary-color);
+  }
+
+  /* border */
+  .menu-border-color
+  {
+    border-color:var(--primary-color);
+  }
+  .border-color
+  {
+    border-color:var(--border-color);
+  }
+  .primary-border
+  {
+    border-color:var(--primary-color);
+  }
+
+  /* font */
+  .font-rubik
+  {
+    font-family:var(--rubik-font);
+  }
+  .font-lato
+  {
+    font-family:var(--lato-font);
+  }
+  
+}
+
