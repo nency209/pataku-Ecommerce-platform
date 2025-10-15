@@ -260,9 +260,8 @@ export default function ProductPage() {
             <div className="flex gap-4">
               <Image
                 src={
-                  selectedImage
-                    ? `http://localhost:8000${selectedImage}`
-                    : "/placeholder.png"
+                 selectedImage
+                    || "/placeholder.png"
                 }
                 alt={product.name}
                 width={112}

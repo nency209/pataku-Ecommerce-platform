@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 
 const api: AxiosInstance = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://pataku-server.onrender.com/api",
   headers: { "Content-Type": "application/json" },
 });
 

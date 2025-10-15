@@ -157,10 +157,8 @@ export default function productsShopCard({
 
             <div>
               <Image
-                src={
-                  products.image
-                    ? `http://localhost:8000${products.image}`
-                    : "/placeholder.jpg"
+                src={products.image
+                    || "/placeholder.jpg"
                 }
                 alt={products.name}
                 width={112}

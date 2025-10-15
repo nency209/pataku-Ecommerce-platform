@@ -26,7 +26,7 @@ interface TopNavigationProps {
   onLogout: () => void;
 }
 
-const socket = io("http://localhost:8000"); // ✅ connect once
+const socket = io("https://pataku-server.onrender.com"); // ✅ connect once
 
 export function TopNavigation({
   user,

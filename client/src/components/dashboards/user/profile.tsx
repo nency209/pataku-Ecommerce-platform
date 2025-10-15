@@ -50,14 +50,14 @@ export default function ProfilePage() {
         // ✅ Fix: add backend base URL
         setPreview(
           res.data.avatar
-            ? `http://localhost:8000${res.data.avatar}`
+            ? `"https://pataku-server.onrender.com"${res.data.avatar}`
             : "/img/user.jpg"
         );
       })
       .catch(() => toast.error("Failed to load profile"));
   } else {
     setPreview(
-      user.avatar ? `http://localhost:8000${user.avatar}` : "/img/user.jpg"
+      user.avatar ? `"https://pataku-server.onrender.com"${user.avatar}` : "/img/user.jpg"
     );
   }
 }, [user, dispatch]);

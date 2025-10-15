@@ -20,7 +20,7 @@ import io from "socket.io-client";
 import api from "@/utils/api";
 import { Order } from "@/types";
 import Image from "next/image";
-const socket = io("http://localhost:8000");
+const socket = io("https://pataku-server.onrender.com");
 
 export function OrdersManagement() {
   const [orders, setOrders] = useState<Order[]>([]);
