@@ -20,7 +20,7 @@ import io from "socket.io-client";
 import api from "@/utils/api";
 import { Order } from "@/types";
 import Image from "next/image";
-const socket = io("https://pataku-server.onrender.com");
+const socket = io("https://pataku-ecommerce-platform-server.onrender.com");
 
 export function OrdersManagement() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -203,7 +203,7 @@ export function OrdersManagement() {
                         alt={item.product.name}
                         className="w-12 h-12 rounded border"
                       />
-                      
+
                       <span>
                         {item.product.name} — {item.quantity} pcs @$
                         {item.product.price}

@@ -37,31 +37,32 @@ export default function ProfilePage() {
 
   // Load user profile if Redux empty
   useEffect(() => {
-  if (!user) {
-    api
-      .get("/auth/user", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((res) => {
-        dispatch(setUser(res.data));
+    if (!user) {
+      api
+        .get("/auth/user", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((res) => {
+          dispatch(setUser(res.data));
 
-        // ✅ Fix: add backend base URL
-        setPreview(
-          res.data.avatar
-            ? `"https://pataku-server.onrender.com"${res.data.avatar}`
-            : "/img/user.jpg"
-        );
-      })
-      .catch(() => toast.error("Failed to load profile"));
-  } else {
-    setPreview(
-      user.avatar ? `"https://pataku-server.onrender.com"${user.avatar}` : "/img/user.jpg"
-    );
-  }
-}, [user, dispatch]);
-
+          // ✅ Fix: add backend base URL
+          setPreview(
+            res.data.avatar
+              ? `"https://pataku-ecommerce-platform-server.onrender.com"${res.data.avatar}`
+              : "/img/user.jpg"
+          );
+        })
+        .catch(() => toast.error("Failed to load profile"));
+    } else {
+      setPreview(
+        user.avatar
+          ? `"https://pataku-ecommerce-platform-server.onrender.com"${user.avatar}`
+          : "/img/user.jpg"
+      );
+    }
+  }, [user, dispatch]);
 
   const handleSave = async (values: { name: string; email: string }) => {
     try {

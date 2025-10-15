@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 
 const api: AxiosInstance = axios.create({
-  baseURL: "https://pataku-server.onrender.com/api",
+  baseURL: "https://pataku-ecommerce-platform-server.onrender.com/api",
   headers: { "Content-Type": "application/json" },
 });
 

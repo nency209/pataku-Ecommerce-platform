@@ -26,15 +26,13 @@ interface TopNavigationProps {
   onLogout: () => void;
 }
 
-const socket = io("https://pataku-server.onrender.com"); // ✅ connect once
+const socket = io("https://pataku-ecommerce-platform-server.onrender.com"); // ✅ connect once
 
 export function TopNavigation({
   user,
   onToggleSidebar,
   onLogout,
-  
 }: TopNavigationProps) {
-
   const [notifications, setNotifications] = useState<
     { id: number; message: string; time: string; unread: boolean }[]
   >([]);
@@ -163,7 +161,6 @@ export function TopNavigation({
                 </Avatar>
                 <div className="hidden md:block text-left">
                   <p className="text-sm">{user?.name}</p>
-                  
                 </div>
               </Button>
             </DropdownMenuTrigger>
